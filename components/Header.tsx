@@ -1,7 +1,6 @@
 "use client";
 
 import { ShieldCheck } from "lucide-react";
-import { CONFIG } from "@/lib/config";
 import { useI18n } from "@/lib/i18n";
 import LanguageSelector from "./LanguageSelector";
 
@@ -32,7 +31,8 @@ export default function Header() {
             <span className="term-dot bg-codegreen" />
           </span>
           <span className="twrap min-w-0 flex-1 font-mono text-[12px] font-bold text-ink">
-            {CONFIG.terminalUser}:~$
+            <span className="block leading-tight">Adnan.120hz</span>
+            <span className="block leading-tight">Apple Security Reserch</span>
           </span>
           <span className="flex flex-shrink-0 items-center gap-1.5 font-mono text-[11px] font-bold uppercase tracking-widest text-ink">
             <span className="status-dot" aria-hidden="true" />
@@ -65,7 +65,7 @@ export default function Header() {
                 )}
                 <a
                   href={item.href}
-                  className="twrap px-2 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-ink transition-colors hover:bg-accent hover:text-accenttext sm:px-3"
+                  className="twrap px-2 py-1.5 font-mono text-[11px] font-bold tracking-[0.16em] text-ink transition-colors hover:bg-accent hover:text-accenttext sm:px-3"
                 >
                   {t(item.key)}
                 </a>
