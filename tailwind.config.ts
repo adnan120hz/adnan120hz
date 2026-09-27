@@ -19,7 +19,7 @@ const config: Config = {
         accent: "#DFAF2F",
         accentdark: "#A63D32",
         accenttext: "#242016",
-        codegreen: "#667D45",
+        codegreen: "#2E5B21",
         codeblue: "#1F5FD0",
       },
       fontFamily: {

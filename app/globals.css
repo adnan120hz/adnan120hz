@@ -16,7 +16,7 @@
   --accent: #dfaf2f;
   --accent-dark: #a63d32;
   --accent-text: #242016;
-  --code-green: #3f6b2f;
+  --code-green: #2e5b21;
   --code-blue: #1f5fd0;
 }
 
@@ -68,7 +68,7 @@ body::before {
   top: 0;
   width: 20%;
   max-height: none;
-  opacity: 0.45;
+  opacity: 0.6;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 13px;
   line-height: 1.8;
@@ -99,7 +99,7 @@ body::before {
 }
 
 .term-line.tone-dim {
-  color: var(--foreground-muted);
+  color: #4d4132;
 }
 
 @keyframes term-scroll {
