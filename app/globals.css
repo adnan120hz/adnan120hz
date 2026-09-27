@@ -3,39 +3,21 @@
 @tailwind utilities;
 
 /* ————————————————————————————————
-   ADNAN.120HZ — bright BLUE terminal design tokens
-   Vivid blue paper × white text × dark-navy console code.
-   Default theme is LIGHT; [data-theme="dark"] switches
-   the whole site to the dark console variant.
+   ADNAN.120HZ — light BLUE terminal design tokens
+   Cool steel-blue paper × dark console code × blue accents
 ———————————————————————————————— */
 :root {
-  --background: #2e9bd6;
-  --surface: #3fa9dc;
-  --surface-light: #57b4e2;
-  --foreground: #ffffff;
-  --foreground-muted: #e6f3fc;
-  --border: #0d3a5c;
-  --accent: #0d3a5c;
-  --accent-dark: #082a44;
-  --accent-text: #ffffff;
-  --code-green: #14532d;
-  --code-blue: #0d2f8f;
-  --code-dim: #33475c;
-}
-
-[data-theme="dark"] {
-  --background: #081423;
-  --surface: #0e1f36;
-  --surface-light: #16324f;
-  --foreground: #ffffff;
-  --foreground-muted: #a9c6dc;
-  --border: #3d607f;
-  --accent: #3f9fe0;
-  --accent-dark: #2e7cd6;
-  --accent-text: #06121f;
-  --code-green: #5fd08a;
-  --code-blue: #8fbef5;
-  --code-dim: #7e93a8;
+  --background: #a9c6da;
+  --surface: #bcd4e4;
+  --surface-light: #d3e3ef;
+  --foreground: #0f1b28;
+  --foreground-muted: #47617a;
+  --border: #152434;
+  --accent: #2e7cd6;
+  --accent-dark: #174e8f;
+  --accent-text: #0c1b2e;
+  --code-green: #2e7d4f;
+  --code-blue: #1a56c4;
 }
 
 html {
@@ -51,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-/* faint technical grid printed on the paper */
+/* faint technical grid printed on the blue paper */
 body::before {
   content: "";
   position: fixed;
@@ -59,15 +41,9 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(13, 58, 92, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13, 58, 92, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(21, 36, 52, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 36, 52, 0.05) 1px, transparent 1px);
   background-size: 28px 28px;
-}
-
-[data-theme="dark"] body::before {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
 ::selection {
@@ -102,6 +78,12 @@ body::before {
   will-change: transform;
 }
 
+@media (max-width: 700px) {
+  .term-col.hide-sm {
+    display: none;
+  }
+}
+
 .term-line {
   overflow: hidden;
   text-overflow: clip;
@@ -117,7 +99,7 @@ body::before {
 }
 
 .term-line.tone-dim {
-  color: var(--code-dim);
+  color: #3d4f61;
 }
 
 @keyframes term-scroll {

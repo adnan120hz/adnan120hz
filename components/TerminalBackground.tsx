@@ -8,9 +8,6 @@ import type { CSSProperties } from "react";
  * typing line that reveals characters as if being typed (pure CSS,
  * steps() timing — no per-frame React re-renders).
  *
- * All seven columns render on every viewport so the code fills the
- * left, center, and right of the screen, including on mobile.
- *
  * The content is hardcoded, never executes, and contains no secrets.
  * - pointer-events: none, low z-index, dim opacity
  * - honors prefers-reduced-motion (static texture in globals.css)
@@ -136,13 +133,13 @@ const TYPING = [
 
 /** Columns with staggered speeds for a natural console feel. */
 const COLUMNS = [
-  { left: "1%", duration: 60, delay: -12, offset: 0, typeDur: 11 },
-  { left: "15%", duration: 72, delay: -44, offset: 17, typeDur: 14 },
-  { left: "29%", duration: 64, delay: -26, offset: 34, typeDur: 10 },
-  { left: "43%", duration: 78, delay: -56, offset: 51, typeDur: 13 },
-  { left: "57%", duration: 66, delay: -32, offset: 68, typeDur: 12 },
-  { left: "71%", duration: 74, delay: -48, offset: 85, typeDur: 11 },
-  { left: "85%", duration: 62, delay: -20, offset: 9, typeDur: 14 },
+  { left: "1%", duration: 60, delay: -12, offset: 0, typeDur: 11, hideSm: false },
+  { left: "15%", duration: 72, delay: -44, offset: 17, typeDur: 14, hideSm: false },
+  { left: "29%", duration: 64, delay: -26, offset: 34, typeDur: 10, hideSm: false },
+  { left: "43%", duration: 78, delay: -56, offset: 51, typeDur: 13, hideSm: false },
+  { left: "57%", duration: 66, delay: -32, offset: 68, typeDur: 12, hideSm: true },
+  { left: "71%", duration: 74, delay: -48, offset: 85, typeDur: 11, hideSm: true },
+  { left: "85%", duration: 62, delay: -20, offset: 9, typeDur: 14, hideSm: true },
 ];
 
 function rotated(offset: number): TermLine[] {
@@ -165,7 +162,7 @@ export default function TerminalBackground() {
         return (
           <div
             key={i}
-            className="term-col"
+            className={`term-col${col.hideSm ? " hide-sm" : ""}`}
             style={{
               left: col.left,
               animationDuration: `${col.duration}s`,
