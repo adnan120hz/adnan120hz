@@ -1,0 +1,91 @@
+import {
+  Github,
+  Heart,
+  MessageCircle,
+  Music2,
+  Send,
+  type LucideIcon,
+} from "lucide-react";
+import { CONFIG } from "@/lib/config";
+
+export interface SiteLink {
+  id: string;
+  /** Calendar section number, e.g. "02" */
+  sectionNo: string;
+  /** i18n key suffix under "sections.", e.g. "community" */
+  sectionKey: string;
+  /** Brand title — never translated, never reordered */
+  title: string;
+  /** i18n key for the description */
+  descriptionKey: string;
+  url: string;
+  /** Short human-readable host label shown on the card */
+  urlLabel: string;
+  icon: LucideIcon;
+  /** Anchor id for in-page navigation (optional) */
+  anchor?: string;
+  /** Mustard highlight variant (donation card) */
+  accent?: boolean;
+}
+
+/**
+ * Single source of truth for the five primary links.
+ * Rendered in array order — never sorted, never filtered.
+ */
+export const LINKS: SiteLink[] = [
+  {
+    id: "telegram-channel",
+    sectionNo: "02",
+    sectionKey: "community",
+    title: "Adnan.120hz Telegram",
+    descriptionKey: "links.telegram.description",
+    url: CONFIG.telegramChannel,
+    urlLabel: "t.me/adnan120hz",
+    icon: Send,
+    anchor: "community",
+  },
+  {
+    id: "telegram-chat",
+    sectionNo: "03",
+    sectionKey: "communityChat",
+    title: "Adnan.120hz Chat",
+    descriptionKey: "links.chat.description",
+    url: CONFIG.telegramChat,
+    urlLabel: "t.me/chatadnan",
+    icon: MessageCircle,
+  },
+  {
+    id: "donate",
+    sectionNo: "04",
+    sectionKey: "support",
+    title: "Donate Adnan.120hz / Gievano",
+    descriptionKey: "links.donate.description",
+    url: CONFIG.donateUrl,
+    urlLabel: "adnan120hz-redesign-ui.vercel.app",
+    icon: Heart,
+    anchor: "support",
+    accent: true,
+  },
+  {
+    id: "tiktok",
+    sectionNo: "05",
+    sectionKey: "social",
+    title: "Adnan.120hz TikTok",
+    descriptionKey: "links.tiktok.description",
+    url: CONFIG.tiktokUrl,
+    urlLabel: "tiktok.com/@adnan.120hz",
+    icon: Music2,
+    anchor: "social",
+  },
+  {
+    id: "workplot",
+    sectionNo: "06",
+    sectionKey: "development",
+    title: "Gievano WorkPlot",
+    descriptionKey: "links.workplot.description",
+    url: CONFIG.githubUrl,
+    urlLabel: "github.com/gievano/WorkPlot",
+    icon: Github,
+    anchor: "development",
+  },
+];

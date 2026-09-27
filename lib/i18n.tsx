@@ -1,65 +1,79 @@
-'use client';
+"use client";
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
-import type { Lang } from '../data/faq';
-import { translations } from '../data/translations';
-import { CONFIG } from './config';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
+import { LANGS, translations, type Lang } from "@/data/translations";
 
-interface LanguageContextValue {
+const STORAGE_KEY = "adnan120hz-lang";
+
+interface I18nContextValue {
   lang: Lang;
-  setLang: (l: Lang) => void;
+  setLang: (lang: Lang) => void;
   t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextValue>({
-  lang: 'en',
+const I18nContext = createContext<I18nContextValue>({
+  lang: "en",
   setLang: () => {},
-  t: (k: string) => k,
+  t: (key: string) => key,
 });
 
-const STORAGE_KEY = 'adnan-lang';
-
-function toHtmlLang(l: Lang): string {
-  return l === 'ptBR' ? 'pt-BR' : l;
+function isLang(value: unknown): value is Lang {
+  return LANGS.some((entry) => entry.code === value);
 }
 
+/**
+ * Language provider.
+ * Defaults to English on both server and client (hydration-safe);
+ * a stored preference is applied after mount only.
+ * Only the language choice is persisted — never personal data.
+ */
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  // Default 'en' on both server and first client render -> no hydration mismatch.
-  const [lang, setLangState] = useState<Lang>(CONFIG.defaultLanguage);
+  const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY) as Lang | null;
-      if (saved && (CONFIG.supportedLanguages as string[]).includes(saved)) {
+      const saved = window.localStorage.getItem(STORAGE_KEY);
+      if (isLang(saved)) {
         setLangState(saved);
-        document.documentElement.lang = toHtmlLang(saved);
       }
     } catch {
-      /* storage unavailable — keep default */
+      /* storage unavailable — stay on English */
     }
   }, []);
 
-  const setLang = (l: Lang) => {
-    setLangState(l);
+  const setLang = useCallback((next: Lang) => {
+    setLangState(next);
     try {
-      localStorage.setItem(STORAGE_KEY, l);
+      window.localStorage.setItem(STORAGE_KEY, next);
     } catch {
-      /* ignore */
+      /* storage unavailable — preference applies for this session only */
     }
-    document.documentElement.lang = toHtmlLang(l);
-  };
+  }, []);
 
-  const t = (key: string): string => {
-    return translations[lang]?.[key] ?? translations.en[key] ?? key;
-  };
-
-  return (
-    <LanguageContext.Provider value={{ lang, setLang, t }}>
-      {children}
-    </LanguageContext.Provider>
+  const t = useCallback(
+    (key: string): string => {
+      return translations[lang][key] ?? translations.en[key] ?? key;
+    },
+    [lang]
   );
+
+  useEffect(() => {
+    document.documentElement.lang = lang === "ptBR" ? "pt-BR" : lang;
+  }, [lang]);
+
+  const value = useMemo(() => ({ lang, setLang, t }), [lang, setLang, t]);
+
+  return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 
-export function useLanguage(): LanguageContextValue {
-  return useContext(LanguageContext);
+export function useI18n(): I18nContextValue {
+  return useContext(I18nContext);
 }

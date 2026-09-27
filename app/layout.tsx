@@ -1,30 +1,43 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata, Viewport } from "next";
+import { CONFIG } from "@/lib/config";
+import TerminalBackground from "@/components/TerminalBackground";
+import Providers from "@/components/Providers";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  // TODO: ganti dengan domain production final jika berbeda
-  metadataBase: new URL('https://adnan120hz-redesign-ui.vercel.app'),
-  title: 'Adnan.120hz | Apple Security Research',
+  metadataBase: new URL(CONFIG.metadataBase),
+  title: "Adnan.120hz | Apple Security Research",
   description:
-    'Independent iOS Security Research, Apple Ecosystem, iOS Education, and Community Links.',
+    "Independent iOS Security Research, Apple Ecosystem, iOS Education, and Community Links.",
   openGraph: {
-    title: 'Adnan.120hz | Apple Security Research',
-    description: 'Independent iOS Security Research & Education.',
-    images: ['/images/profile.jpg'],
-    type: 'website',
+    title: "Adnan.120hz | Apple Security Research",
+    description:
+      "Independent iOS Security Research, Apple Ecosystem, iOS Education, and Community Links.",
+    type: "website",
   },
-  twitter: {
-    card: 'summary',
-    title: 'Adnan.120hz | Apple Security Research',
-    description: 'Independent iOS Security Research & Education.',
-    images: ['/images/profile.jpg'],
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        <TerminalBackground />
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
