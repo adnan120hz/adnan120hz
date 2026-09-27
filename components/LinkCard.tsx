@@ -47,6 +47,11 @@ export default function LinkCard({ link, spanClass = "" }: LinkCardProps) {
           <span className="twrap mt-1.5 block text-[15px] leading-relaxed text-ink">
             {t(link.descriptionKey)}
           </span>
+          {link.extraKey && (
+            <span className="twrap mt-1.5 block text-[14px] leading-relaxed text-muted">
+              {t(link.extraKey)}
+            </span>
+          )}
           <span className="twrap mt-3 inline-block max-w-full border-2 border-line bg-surfacelight px-2 py-1 font-mono text-[12px] text-ink">
             {link.urlLabel}
           </span>

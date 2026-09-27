@@ -66,9 +66,9 @@ body::before {
 .term-col {
   position: absolute;
   top: 0;
-  width: 24%;
+  width: 26%;
   max-height: none;
-  opacity: 0.1;
+  opacity: 0.05;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 11px;
   line-height: 1.9;

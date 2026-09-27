@@ -2,21 +2,23 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, AtSign, ShieldCheck } from "lucide-react";
 import { CONFIG } from "@/lib/config";
 import { useI18n } from "@/lib/i18n";
 import SectionHeading from "./SectionHeading";
 
 /**
- * Profile — the first thing visitors see.
- * Photo, brand title, subtitle, description, TikTok CTA.
- * Uses the exact supplied profile image, never a generated one.
+ * Profile — the first thing visitors see, always visible.
+ * Photo, handle, brand title, subtitle, description, TikTok CTA.
+ * Solid opaque surface so the animated background never
+ * interferes with readability. Uses the exact supplied
+ * profile image, never a generated one.
  */
 export default function ProfileSection() {
   const { t } = useI18n();
 
   return (
-    <section id="home" aria-labelledby="profile-name" className="mt-8">
+    <section id="home" aria-labelledby="profile-name" className="mt-6">
       <SectionHeading no="01" label={t("profile.section")} />
 
       <motion.div
@@ -49,17 +51,21 @@ export default function ProfileSection() {
             <Image
               src={CONFIG.profileImage}
               alt={t("a11y.profilePhoto")}
-              width={184}
-              height={184}
+              width={208}
+              height={208}
               priority
-              className="h-40 w-40 rounded-md border-2 border-line object-cover shadow-hard-sm sm:h-44 sm:w-44"
+              className="h-44 w-44 rounded-md border-[3px] border-line object-cover shadow-hard-sm sm:h-52 sm:w-52"
             />
           </div>
 
           <div className="min-w-0 text-center md:text-left">
+            <p className="twrap inline-flex items-center justify-center gap-1.5 border-2 border-line bg-surfacelight px-2.5 py-1 font-mono text-[12px] font-bold text-accentdark md:justify-start">
+              <AtSign size={13} strokeWidth={2.75} aria-hidden="true" />
+              adnan.120hz
+            </p>
             <h1
               id="profile-name"
-              className="twrap text-3xl font-black tracking-tight text-ink sm:text-4xl"
+              className="twrap mt-3 text-4xl font-black tracking-tight text-ink sm:text-5xl"
             >
               {CONFIG.siteName}
             </h1>

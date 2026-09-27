@@ -1,5 +1,6 @@
 "use client";
 
+import { ShieldCheck } from "lucide-react";
 import { CONFIG } from "@/lib/config";
 import { useI18n } from "@/lib/i18n";
 import LanguageSelector from "./LanguageSelector";
@@ -12,73 +13,66 @@ const NAV_ITEMS = [
 ] as const;
 
 /**
- * Terminal-window header: decorative window controls, the
- * `adnan@ios-research` prompt, portal badge, language selector,
- * and a compact sticky anchor nav.
+ * Compact terminal-inspired header.
+ * One short title-bar strip plus one slim sticky nav row —
+ * deliberately small so the profile appears immediately below,
+ * even on mobile. No boot log, no fake terminal session.
  */
 export default function Header() {
   const { t } = useI18n();
 
   return (
     <header className="relative z-10">
+      {/* title-bar strip */}
       <div className="term-window">
-        {/* title bar */}
-        <div className="term-titlebar">
-          <span aria-hidden="true" className="flex gap-1.5">
+        <div className="term-titlebar flex-wrap gap-x-3 gap-y-2 py-2">
+          <span aria-hidden="true" className="flex flex-shrink-0 gap-1.5">
             <span className="term-dot bg-accentdark" />
             <span className="term-dot bg-accent" />
             <span className="term-dot bg-codegreen" />
           </span>
-          <span className="twrap font-mono text-[12px] font-bold text-ink">
+          <span className="twrap min-w-0 flex-1 font-mono text-[12px] font-bold text-ink">
             {CONFIG.terminalUser}:~$
           </span>
-          <span className="ml-auto flex flex-shrink-0 items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-widest text-ink">
+          <span className="flex flex-shrink-0 items-center gap-1.5 font-mono text-[11px] font-bold uppercase tracking-widest text-ink">
             <span className="status-dot" aria-hidden="true" />
             {t("header.online")}
           </span>
-        </div>
-
-        {/* identity row */}
-        <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3">
-          <div className="min-w-0">
-            <p className="inline-block border-2 border-line bg-ink px-2 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-paper">
-              {t("header.portal")}
-            </p>
-            <p className="twrap mt-2 font-mono text-[12px] text-muted">
-              <span aria-hidden="true" className="mr-1 text-codegreen">$</span>
-              {t("header.boot")}
-              <span aria-hidden="true" className="term-cursor ml-1" />
-            </p>
-          </div>
           <LanguageSelector />
         </div>
       </div>
 
-      {/* compact anchor nav */}
+      {/* slim sticky nav with brand badge */}
       <nav
         aria-label={t("nav.label")}
-        className="sticky top-2 z-40 mt-4 border-2 border-line bg-surface shadow-hard-sm"
+        className="sticky top-2 z-40 mt-3 border-2 border-line bg-surface shadow-hard-sm"
       >
-        <ul className="flex flex-wrap items-stretch">
-          {NAV_ITEMS.map((item, index) => (
-            <li key={item.href} className="flex min-w-0">
-              {index > 0 && (
-                <span
-                  aria-hidden="true"
-                  className="self-center font-mono text-muted"
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 px-2 py-1.5 sm:px-3">
+          <p className="mr-1 inline-flex flex-shrink-0 items-center gap-1.5 border-2 border-line bg-ink px-2 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-paper">
+            <ShieldCheck size={13} strokeWidth={2.75} aria-hidden="true" />
+            {t("profile.eyebrow")}
+          </p>
+          <ul className="flex min-w-0 flex-1 flex-wrap items-center">
+            {NAV_ITEMS.map((item, index) => (
+              <li key={item.href} className="flex min-w-0 items-center">
+                {index > 0 && (
+                  <span
+                    aria-hidden="true"
+                    className="font-mono text-[11px] text-muted"
+                  >
+                    /
+                  </span>
+                )}
+                <a
+                  href={item.href}
+                  className="twrap px-2 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-ink transition-colors hover:bg-accent hover:text-accenttext sm:px-3"
                 >
-                  /
-                </span>
-              )}
-              <a
-                href={item.href}
-                className="twrap px-3 py-2.5 font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-ink transition-colors hover:bg-accent hover:text-accenttext sm:px-4"
-              >
-                {t(item.key)}
-              </a>
-            </li>
-          ))}
-        </ul>
+                  {t(item.key)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </header>
   );

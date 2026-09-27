@@ -66,11 +66,10 @@ const LINES: TermLine[] = [
 
 /** Columns with staggered speeds for a natural console feel. */
 const COLUMNS = [
-  { left: "1%", duration: 52, delay: -12, offset: 0 },
-  { left: "21%", duration: 68, delay: -40, offset: 11 },
-  { left: "41%", duration: 60, delay: -25, offset: 23 },
-  { left: "61%", duration: 74, delay: -55, offset: 7 },
-  { left: "81%", duration: 56, delay: -5, offset: 31 },
+  { left: "2%", duration: 58, delay: -12, offset: 0 },
+  { left: "27%", duration: 72, delay: -40, offset: 11 },
+  { left: "52%", duration: 64, delay: -25, offset: 23 },
+  { left: "77%", duration: 78, delay: -55, offset: 7 },
 ];
 
 function rotated(offset: number): TermLine[] {

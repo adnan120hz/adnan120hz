@@ -43,10 +43,14 @@ const en: Dict = {
 
   "links.telegram.description": "Official Telegram Channel",
   "links.chat.description": "Official Community Chat",
-  "links.donate.description":
-    "Support future projects, development, and upcoming research tools.",
+  "links.donate.description": "Support Future Projects & Development",
+  "links.donate.extra":
+    "Support upcoming independent research, development, and future projects.",
   "links.tiktok.description": "Follow My TikTok",
   "links.workplot.description": "GitHub Repository • Source Code & Development",
+  "about.section": "ABOUT MY RESEARCH",
+  "about.description":
+    "Independent educational content covering iOS technology, Apple ecosystem research, mobile development, and general security concepts.",
   "card.open": "OPEN LINK",
   "card.openAria": "Open link",
 
@@ -89,10 +93,14 @@ const id: Dict = {
 
   "links.telegram.description": "Kanal Telegram Resmi",
   "links.chat.description": "Obrolan Komunitas Resmi",
-  "links.donate.description":
-    "Dukung proyek masa depan, pengembangan, dan perangkat riset mendatang.",
+  "links.donate.description": "Dukung Proyek Masa Depan & Pengembangan",
+  "links.donate.extra":
+    "Dukung riset independen, pengembangan, dan proyek masa depan yang akan datang.",
   "links.tiktok.description": "Ikuti TikTok Saya",
   "links.workplot.description": "Repositori GitHub • Kode Sumber & Pengembangan",
+  "about.section": "TENTANG RISET SAYA",
+  "about.description":
+    "Konten edukasi independen yang mencakup teknologi iOS, riset ekosistem Apple, pengembangan seluler, dan konsep keamanan umum.",
   "card.open": "BUKA TAUTAN",
   "card.openAria": "Buka tautan",
 
@@ -135,10 +143,14 @@ const vi: Dict = {
 
   "links.telegram.description": "Kênh Telegram Chính thức",
   "links.chat.description": "Nhóm Trò chuyện Cộng đồng Chính thức",
-  "links.donate.description":
-    "Hỗ trợ các dự án tương lai, phát triển và công cụ nghiên cứu sắp tới.",
+  "links.donate.description": "Hỗ trợ Dự án Tương lai & Phát triển",
+  "links.donate.extra":
+    "Hỗ trợ nghiên cứu độc lập, phát triển và các dự án tương lai sắp tới.",
   "links.tiktok.description": "Theo dõi TikTok của Tôi",
   "links.workplot.description": "Kho GitHub • Mã nguồn & Phát triển",
+  "about.section": "VỀ NGHIÊN CỨU CỦA TÔI",
+  "about.description":
+    "Nội dung giáo dục độc lập về công nghệ iOS, nghiên cứu hệ sinh thái Apple, phát triển di động và các khái niệm bảo mật chung.",
   "card.open": "MỞ LIÊN KẾT",
   "card.openAria": "Mở liên kết",
 
@@ -181,9 +193,13 @@ const zh: Dict = {
 
   "links.telegram.description": "官方 Telegram 频道",
   "links.chat.description": "官方社区聊天",
-  "links.donate.description": "支持未来的项目、开发与即将推出的研究工具。",
+  "links.donate.description": "支持未来项目与开发",
+  "links.donate.extra": "支持即将开展的独立研究、开发与未来项目。",
   "links.tiktok.description": "关注我的 TikTok",
   "links.workplot.description": "GitHub 仓库 • 源代码与开发",
+  "about.section": "关于我的研究",
+  "about.description":
+    "独立教育内容，涵盖 iOS 技术、Apple 生态研究、移动开发与通用安全概念。",
   "card.open": "打开链接",
   "card.openAria": "打开链接",
 
@@ -226,10 +242,14 @@ const ptBR: Dict = {
 
   "links.telegram.description": "Canal Oficial no Telegram",
   "links.chat.description": "Chat Oficial da Comunidade",
-  "links.donate.description":
-    "Apoie projetos futuros, desenvolvimento e próximas ferramentas de pesquisa.",
+  "links.donate.description": "Apoie Projetos Futuros & Desenvolvimento",
+  "links.donate.extra":
+    "Apoie próximas pesquisas independentes, desenvolvimento e projetos futuros.",
   "links.tiktok.description": "Siga Meu TikTok",
   "links.workplot.description": "Repositório GitHub • Código-fonte & Desenvolvimento",
+  "about.section": "SOBRE MINHA PESQUISA",
+  "about.description":
+    "Conteúdo educacional independente sobre tecnologia iOS, pesquisa do ecossistema Apple, desenvolvimento móvel e conceitos gerais de segurança.",
   "card.open": "ABRIR LINK",
   "card.openAria": "Abrir link",
 

@@ -18,6 +18,8 @@ export interface SiteLink {
   title: string;
   /** i18n key for the description */
   descriptionKey: string;
+  /** Optional i18n key for a second description line */
+  extraKey?: string;
   url: string;
   /** Short human-readable host label shown on the card */
   urlLabel: string;
@@ -60,6 +62,7 @@ export const LINKS: SiteLink[] = [
     sectionKey: "support",
     title: "Donate Adnan.120hz / Gievano",
     descriptionKey: "links.donate.description",
+    extraKey: "links.donate.extra",
     url: CONFIG.donateUrl,
     urlLabel: "adnan120hz-redesign-ui.vercel.app",
     icon: Heart,

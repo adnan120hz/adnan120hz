@@ -8,20 +8,22 @@ import SectionHeading from "./SectionHeading";
 /**
  * Calendar grid of the five primary link cells.
  * Rendered strictly in LINKS array order — never sorted.
+ * Single column on mobile (readability first), two columns
+ * on desktop with the donation card spanning both.
  */
 const SPANS: Record<SiteLink["id"], string> = {
-  "telegram-channel": "sm:col-span-1 lg:col-span-7",
-  "telegram-chat": "sm:col-span-1 lg:col-span-5",
-  donate: "sm:col-span-2 lg:col-span-12",
-  tiktok: "sm:col-span-1 lg:col-span-5",
-  workplot: "sm:col-span-1 lg:col-span-7",
+  "telegram-channel": "",
+  "telegram-chat": "",
+  donate: "md:col-span-2",
+  tiktok: "",
+  workplot: "",
 };
 
 export default function LinkDashboard() {
   const { t } = useI18n();
 
   return (
-    <div className="mt-10 grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-12">
+    <div className="mt-10 grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2">
       {LINKS.map((link) => (
         <section
           key={link.id}
