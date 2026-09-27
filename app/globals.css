@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 /* ————————————————————————————————
-   ADNAN.120HZ — light retro terminal design tokens
-   Warm paper × dark console code × amber accents
+   ADNAN.120HZ — light BLUE terminal design tokens
+   Cool steel-blue paper × dark console code × blue accents
 ———————————————————————————————— */
 :root {
-  --background: #d8b77c;
-  --surface: #e7c996;
-  --surface-light: #f0ddb8;
-  --foreground: #171512;
-  --foreground-muted: #655642;
-  --border: #201b15;
-  --accent: #dfaf2f;
-  --accent-dark: #a63d32;
-  --accent-text: #242016;
-  --code-green: #2e5b21;
-  --code-blue: #1f5fd0;
+  --background: #a9c6da;
+  --surface: #bcd4e4;
+  --surface-light: #d3e3ef;
+  --foreground: #0f1b28;
+  --foreground-muted: #47617a;
+  --border: #152434;
+  --accent: #2e7cd6;
+  --accent-dark: #174e8f;
+  --accent-text: #0c1b2e;
+  --code-green: #2e7d4f;
+  --code-blue: #1a56c4;
 }
 
 html {
@@ -33,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-/* faint technical grid printed on the paper */
+/* faint technical grid printed on the blue paper */
 body::before {
   content: "";
   position: fixed;
@@ -41,8 +41,8 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(32, 27, 21, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(32, 27, 21, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(21, 36, 52, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 36, 52, 0.05) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
@@ -99,7 +99,7 @@ body::before {
 }
 
 .term-line.tone-dim {
-  color: #4d4132;
+  color: #3d4f61;
 }
 
 @keyframes term-scroll {
