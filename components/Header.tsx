@@ -12,6 +12,24 @@ const NAV_ITEMS = [
 ] as const;
 
 /**
+ * Insert a break opportunity after every "." and "/" so long nav labels
+ * wrap cleanly ("Adnan." / "120hz/" / "WorkPlot") instead of being cut
+ * mid-word by overflow-wrap: anywhere.
+ */
+function breakable(label: string) {
+  return label.split(/([./])/g).map((chunk, i) =>
+    chunk === "." || chunk === "/" ? (
+      <span key={i}>
+        {chunk}
+        <wbr />
+      </span>
+    ) : (
+      <span key={i}>{chunk}</span>
+    ),
+  );
+}
+
+/**
  * Compact terminal-inspired header.
  * One short title-bar strip plus one slim sticky nav row —
  * deliberately small so the profile appears immediately below,
@@ -65,9 +83,10 @@ export default function Header() {
                 )}
                 <a
                   href={item.href}
-                  className="twrap px-2 py-1.5 font-mono text-[11px] font-bold tracking-[0.16em] text-ink transition-colors hover:bg-accent hover:text-accenttext sm:px-3"
+                  style={{ overflowWrap: "break-word" }}
+                  className="min-w-0 max-w-full px-2 py-1.5 font-mono text-[11px] font-bold tracking-[0.16em] text-ink transition-colors hover:bg-accent hover:text-accenttext sm:px-3"
                 >
-                  {t(item.key)}
+                  {breakable(t(item.key))}
                 </a>
               </li>
             ))}
