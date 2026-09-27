@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 /* ————————————————————————————————
-   ADNAN.120HZ — dark Linux terminal design tokens
-   Black console × phosphor code × amber accents
+   ADNAN.120HZ — light retro terminal design tokens
+   Warm paper × dark console code × amber accents
 ———————————————————————————————— */
 :root {
-  --background: #070708;
-  --surface: #101013;
-  --surface-light: #17171c;
-  --foreground: #e9e9e7;
-  --foreground-muted: #8b8b93;
-  --border: #2c2c33;
-  --accent: #e0aa2e;
-  --accent-dark: #c04534;
-  --accent-text: #1c1408;
-  --code-green: #46c98a;
-  --code-blue: #6aaed6;
+  --background: #d8b77c;
+  --surface: #e7c996;
+  --surface-light: #f0ddb8;
+  --foreground: #171512;
+  --foreground-muted: #655642;
+  --border: #201b15;
+  --accent: #dfaf2f;
+  --accent-dark: #a63d32;
+  --accent-text: #242016;
+  --code-green: #3f6b2f;
+  --code-blue: #2f5f7d;
 }
 
 html {
@@ -33,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-/* faint technical grid printed on the dark console */
+/* faint technical grid printed on the paper */
 body::before {
   content: "";
   position: fixed;
@@ -41,8 +41,8 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+    linear-gradient(rgba(32, 27, 21, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(32, 27, 21, 0.045) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
@@ -68,7 +68,7 @@ body::before {
   top: 0;
   width: 24%;
   max-height: none;
-  opacity: 0.15;
+  opacity: 0.28;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 12px;
   line-height: 1.8;
@@ -189,33 +189,17 @@ a.card-cell:active {
   background: var(--accent);
 }
 
-a.card-cell-accent:hover {
-  background: #eab53a;
+/* donate card uses the same surface as every other card */
+.card-cell-accent {
+  background: var(--surface);
 }
 
-/* amber donate card: keep dark-on-amber contrast in the dark theme */
-.card-cell-accent .text-ink {
-  color: var(--accent-text);
-}
-.card-cell-accent .text-muted {
-  color: #6e5718;
-}
-.card-cell-accent .border-line {
-  border-color: var(--accent-text);
-}
-.card-cell-accent .bg-surfacelight {
-  background-color: var(--accent-text);
-  color: var(--accent);
-}
-.card-cell-accent .bg-ink {
-  background-color: var(--accent-text);
-}
-.card-cell-accent .text-paper {
-  color: var(--accent);
+a.card-cell-accent:hover {
+  background: var(--surface-light);
 }
 
 :focus-visible {
-  outline: 3px solid var(--code-green);
+  outline: 3px solid var(--accent-dark);
   outline-offset: 2px;
 }
 
