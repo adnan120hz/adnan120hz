@@ -20,7 +20,7 @@ const config: Config = {
         accentdark: "#A63D32",
         accenttext: "#242016",
         codegreen: "#667D45",
-        codeblue: "#426D83",
+        codeblue: "#1F5FD0",
       },
       fontFamily: {
         sans: ["Arial", "Helvetica", "system-ui", "sans-serif"],

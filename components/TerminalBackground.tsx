@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 /**
  * Decorative Linux-terminal code background.
  *
- * Five vertical columns of terminal / boot-log / Swift / iOS snippets
+ * Seven vertical columns of terminal / boot-log / Swift / iOS snippets
  * drift slowly DOWNWARD via CSS keyframes, each column headed by a
  * typing line that reveals characters as if being typed (pure CSS,
  * steps() timing — no per-frame React re-renders).
@@ -82,6 +82,42 @@ const LINES: TermLine[] = [
   { text: "adnan@ios-research:~$ whoami", tone: "cmd" },
   { text: "independent-researcher", tone: "code" },
   { text: "// learn • document • share", tone: "dim" },
+  { text: "localhost kernel[0]: <Info>: mach: ipc space ready", tone: "dim" },
+  { text: "localhost dyld[1]: <Notice>: shared cache loaded", tone: "dim" },
+  { text: "localhost kernel[0]: <Info>: codesign: signature valid", tone: "code" },
+  { text: "localhost trustd[63]: <Notice>: cert chain: ok", tone: "dim" },
+  { text: "adnan@ios-research:~$ codesign -dv /Research/App", tone: "cmd" },
+  { text: "Authority: Apple Development (read-only)", tone: "dim" },
+  { text: "adnan@ios-research:~$ swift --version", tone: "cmd" },
+  { text: "swift-driver 1.115  •  Swift 6.0.3", tone: "dim" },
+  { text: "import Dispatch", tone: "code" },
+  { text: "import Combine", tone: "code" },
+  { text: 'let queue = DispatchQueue(label: "research")', tone: "plain" },
+  { text: 'queue.async { study("XNU") }', tone: "plain" },
+  { text: "localhost kernel[0]: <Debug>: dispatch: queue ready", tone: "dim" },
+  { text: "adnan@ios-research:~$ man sandbox", tone: "cmd" },
+  { text: "sandbox(7): app sandbox profile", tone: "dim" },
+  { text: "// least privilege, always", tone: "dim" },
+  { text: "localhost sandboxd[66]: <Notice>: profile compiled", tone: "dim" },
+  { text: "localhost WebKit[77]: <Notice>: process: edu-mode", tone: "dim" },
+  { text: "localhost kernel[0]: <Info>: IOKit: matching done", tone: "dim" },
+  { text: "adnan@ios-research:~$ otool -L ResearchKit", tone: "cmd" },
+  { text: "linked: SwiftUI, Foundation, Security", tone: "dim" },
+  { text: "struct ThreatModel {", tone: "plain" },
+  { text: '  let scope = "concepts only"', tone: "plain" },
+  { text: '  let rule  = "no live targets"', tone: "plain" },
+  { text: "}", tone: "plain" },
+  { text: "localhost kernel[0]: <Info>: memorystatus: jetsam ok", tone: "dim" },
+  { text: "adnan@ios-research:~$ log show --last 1m --edu", tone: "cmd" },
+  { text: "events: 42  •  mode: read-only", tone: "dim" },
+  { text: "localhost keychaind[69]: <Notice>: edu vault locked", tone: "dim" },
+  { text: "adnan@ios-research:~$ file Research.playground", tone: "cmd" },
+  { text: "Swift playground: text", tone: "dim" },
+  { text: "// document • learn • share", tone: "code" },
+  { text: "localhost Metal[71]: <Notice>: GPU: research profile", tone: "dim" },
+  { text: "localhost kernel[0]: <Info>: smc: sensors ok", tone: "dim" },
+  { text: "adnan@ios-research:~$ uptime", tone: "cmd" },
+  { text: "19:41  up 99 days,  education mode", tone: "dim" },
 ];
 
 /** One typing line per column — revealed character by character in CSS. */
@@ -91,15 +127,19 @@ const TYPING = [
   "adnan@ios-research:~$ sysctl kern.osversion",
   "adnan@ios-research:~$ echo $INDEPENDENT_RESEARCH",
   "adnan@ios-research:~$ ./render --terminal --retro",
+  "adnan@ios-research:~$ swift build --edu",
+  "adnan@ios-research:~$ log stream --read-only",
 ];
 
 /** Columns with staggered speeds for a natural console feel. */
 const COLUMNS = [
-  { left: "1%", duration: 62, delay: -14, offset: 0, typeDur: 11, hideSm: false },
-  { left: "21%", duration: 74, delay: -46, offset: 13, typeDur: 14, hideSm: false },
-  { left: "41%", duration: 66, delay: -28, offset: 27, typeDur: 10, hideSm: false },
-  { left: "61%", duration: 80, delay: -58, offset: 8, typeDur: 13, hideSm: true },
-  { left: "81%", duration: 70, delay: -38, offset: 19, typeDur: 12, hideSm: true },
+  { left: "1%", duration: 60, delay: -12, offset: 0, typeDur: 11, hideSm: false },
+  { left: "15%", duration: 72, delay: -44, offset: 17, typeDur: 14, hideSm: false },
+  { left: "29%", duration: 64, delay: -26, offset: 34, typeDur: 10, hideSm: false },
+  { left: "43%", duration: 78, delay: -56, offset: 51, typeDur: 13, hideSm: false },
+  { left: "57%", duration: 66, delay: -32, offset: 68, typeDur: 12, hideSm: true },
+  { left: "71%", duration: 74, delay: -48, offset: 85, typeDur: 11, hideSm: true },
+  { left: "85%", duration: 62, delay: -20, offset: 9, typeDur: 14, hideSm: true },
 ];
 
 function rotated(offset: number): TermLine[] {

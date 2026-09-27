@@ -17,7 +17,7 @@
   --accent-dark: #a63d32;
   --accent-text: #242016;
   --code-green: #3f6b2f;
-  --code-blue: #2f5f7d;
+  --code-blue: #1f5fd0;
 }
 
 html {
@@ -66,11 +66,11 @@ body::before {
 .term-col {
   position: absolute;
   top: 0;
-  width: 24%;
+  width: 20%;
   max-height: none;
-  opacity: 0.28;
+  opacity: 0.45;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.8;
   white-space: nowrap;
   color: var(--foreground);
