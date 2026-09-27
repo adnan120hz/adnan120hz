@@ -4,6 +4,7 @@ import { ShieldCheck } from "lucide-react";
 import { CONFIG } from "@/lib/config";
 import { useI18n } from "@/lib/i18n";
 import LanguageSelector from "./LanguageSelector";
+import ThemeToggle from "./ThemeToggle";
 
 const NAV_ITEMS = [
   { key: "nav.home", href: "#home" },
@@ -38,6 +39,7 @@ export default function Header() {
             <span className="status-dot" aria-hidden="true" />
             {t("header.online")}
           </span>
+          <ThemeToggle />
           <LanguageSelector />
         </div>
       </div>

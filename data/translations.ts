@@ -65,6 +65,8 @@ const en: Dict = {
   "a11y.language": "Select language",
   "a11y.languageAria": "Language selector",
   "a11y.profilePhoto": "Profile photo of Adnan.120hz",
+  "theme.toDark": "Switch to dark mode",
+  "theme.toLight": "Switch to light mode",
 };
 
 const id: Dict = {
@@ -115,6 +117,8 @@ const id: Dict = {
   "a11y.language": "Pilih bahasa",
   "a11y.languageAria": "Pemilih bahasa",
   "a11y.profilePhoto": "Foto profil Adnan.120hz",
+  "theme.toDark": "Ganti ke mode gelap",
+  "theme.toLight": "Ganti ke mode terang",
 };
 
 const vi: Dict = {
@@ -165,6 +169,8 @@ const vi: Dict = {
   "a11y.language": "Chọn ngôn ngữ",
   "a11y.languageAria": "Bộ chọn ngôn ngữ",
   "a11y.profilePhoto": "Ảnh đại diện của Adnan.120hz",
+  "theme.toDark": "Chuyển sang chế độ tối",
+  "theme.toLight": "Chuyển sang chế độ sáng",
 };
 
 const zh: Dict = {
@@ -214,6 +220,8 @@ const zh: Dict = {
   "a11y.language": "选择语言",
   "a11y.languageAria": "语言选择器",
   "a11y.profilePhoto": "Adnan.120hz 的头像",
+  "theme.toDark": "切换到深色模式",
+  "theme.toLight": "切换到浅色模式",
 };
 
 const ptBR: Dict = {
@@ -264,6 +272,8 @@ const ptBR: Dict = {
   "a11y.language": "Selecionar idioma",
   "a11y.languageAria": "Seletor de idioma",
   "a11y.profilePhoto": "Foto de perfil de Adnan.120hz",
+  "theme.toDark": "Mudar para o modo escuro",
+  "theme.toLight": "Mudar para o modo claro",
 };
 
 export const translations: Record<Lang, Dict> = { en, id, vi, zh, ptBR };
