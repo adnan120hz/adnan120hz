@@ -84,7 +84,7 @@ export const LINKS: SiteLink[] = [
     id: "workplot",
     sectionNo: "06",
     sectionKey: "development",
-    title: "Gievano WorkPlot",
+    title: "Gievano & Adnan.120hz WorkPlot",
     descriptionKey: "links.workplot.description",
     url: CONFIG.githubUrl,
     urlLabel: "github.com/gievano/WorkPlot",
