@@ -17,6 +17,7 @@ const SPANS: Record<SiteLink["id"], string> = {
   donate: "md:col-span-2",
   tiktok: "",
   workplot: "",
+  workslop: "",
 };
 
 export default function LinkDashboard() {

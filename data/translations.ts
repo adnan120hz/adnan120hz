@@ -48,6 +48,7 @@ const en: Dict = {
     "Support upcoming independent research, development, and future projects.",
   "links.tiktok.description": "Follow My TikTok",
   "links.workplot.description": "GitHub Repository • Source Code & Development",
+  "links.workslop.description": "GitHub Repository • iOS System Modification Tools",
   "about.section": "ABOUT MY RESEARCH",
   "about.description":
     "Independent educational content covering iOS technology, Apple ecosystem research, mobile development, and general security concepts.",
@@ -98,6 +99,7 @@ const id: Dict = {
     "Dukung riset independen, pengembangan, dan proyek masa depan yang akan datang.",
   "links.tiktok.description": "Ikuti TikTok Saya",
   "links.workplot.description": "Repositori GitHub • Kode Sumber & Pengembangan",
+  "links.workslop.description": "Repositori GitHub • Tools Modifikasi Sistem iOS",
   "about.section": "TENTANG RISET SAYA",
   "about.description":
     "Konten edukasi independen yang mencakup teknologi iOS, riset ekosistem Apple, pengembangan seluler, dan konsep keamanan umum.",
@@ -148,6 +150,7 @@ const vi: Dict = {
     "Hỗ trợ nghiên cứu độc lập, phát triển và các dự án tương lai sắp tới.",
   "links.tiktok.description": "Theo dõi TikTok của Tôi",
   "links.workplot.description": "Kho GitHub • Mã nguồn & Phát triển",
+  "links.workslop.description": "Kho GitHub • Công cụ sửa đổi hệ thống iOS",
   "about.section": "VỀ NGHIÊN CỨU CỦA TÔI",
   "about.description":
     "Nội dung giáo dục độc lập về công nghệ iOS, nghiên cứu hệ sinh thái Apple, phát triển di động và các khái niệm bảo mật chung.",
@@ -197,6 +200,7 @@ const zh: Dict = {
   "links.donate.extra": "支持即将开展的独立研究、开发与未来项目。",
   "links.tiktok.description": "关注我的 TikTok",
   "links.workplot.description": "GitHub 仓库 • 源代码与开发",
+  "links.workslop.description": "GitHub 仓库 • iOS 系统修改工具",
   "about.section": "关于我的研究",
   "about.description":
     "独立教育内容，涵盖 iOS 技术、Apple 生态研究、移动开发与通用安全概念。",
@@ -247,6 +251,7 @@ const ptBR: Dict = {
     "Apoie próximas pesquisas independentes, desenvolvimento e projetos futuros.",
   "links.tiktok.description": "Siga Meu TikTok",
   "links.workplot.description": "Repositório GitHub • Código-fonte & Desenvolvimento",
+  "links.workslop.description": "Repositório GitHub • Ferramentas de modificação do sistema iOS",
   "about.section": "SOBRE MINHA PESQUISA",
   "about.description":
     "Conteúdo educacional independente sobre tecnologia iOS, pesquisa do ecossistema Apple, desenvolvimento móvel e conceitos gerais de segurança.",

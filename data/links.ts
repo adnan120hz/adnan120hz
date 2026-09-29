@@ -91,4 +91,15 @@ export const LINKS: SiteLink[] = [
     icon: Github,
     anchor: "development",
   },
+  {
+    id: "workslop",
+    sectionNo: "07",
+    sectionKey: "development",
+    title: "Adnan.120hz WorkSlop",
+    descriptionKey: "links.workslop.description",
+    url: "https://github.com/adnan120hz/WorkSlop",
+    urlLabel: "github.com/adnan120hz/WorkSlop",
+    icon: Github,
+    anchor: "workslop",
+  },
 ];
