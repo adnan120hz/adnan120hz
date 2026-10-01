@@ -49,6 +49,8 @@ const en: Dict = {
   "links.tiktok.description": "Follow My TikTok",
   "links.workplot.description": "GitHub Repository • Source Code & Development",
   "links.workslop.description": "GitHub Repository • iOS System Modification Tools",
+  "links.workslopDesktop.description": "GitHub Repository • Desktop Tweaking App for iOS",
+  "links.whatsapp.description": "WhatsApp Group • Kamera & HP Community",
   "about.section": "ABOUT MY RESEARCH",
   "about.description":
     "Independent educational content covering iOS technology, Apple ecosystem research, mobile development, and general security concepts.",
@@ -100,6 +102,8 @@ const id: Dict = {
   "links.tiktok.description": "Ikuti TikTok Saya",
   "links.workplot.description": "Repositori GitHub • Kode Sumber & Pengembangan",
   "links.workslop.description": "Repositori GitHub • Tools Modifikasi Sistem iOS",
+  "links.workslopDesktop.description": "Repositori GitHub • Aplikasi Tweak iOS untuk Desktop",
+  "links.whatsapp.description": "Grup WhatsApp • Komunitas Kamera & HP",
   "about.section": "TENTANG RISET SAYA",
   "about.description":
     "Konten edukasi independen yang mencakup teknologi iOS, riset ekosistem Apple, pengembangan seluler, dan konsep keamanan umum.",
@@ -151,6 +155,8 @@ const vi: Dict = {
   "links.tiktok.description": "Theo dõi TikTok của Tôi",
   "links.workplot.description": "Kho GitHub • Mã nguồn & Phát triển",
   "links.workslop.description": "Kho GitHub • Công cụ sửa đổi hệ thống iOS",
+  "links.workslopDesktop.description": "Kho GitHub • Ứng dụng tinh chỉnh iOS trên máy tính",
+  "links.whatsapp.description": "Nhóm WhatsApp • Cộng đồng Kamera & HP",
   "about.section": "VỀ NGHIÊN CỨU CỦA TÔI",
   "about.description":
     "Nội dung giáo dục độc lập về công nghệ iOS, nghiên cứu hệ sinh thái Apple, phát triển di động và các khái niệm bảo mật chung.",
@@ -201,6 +207,8 @@ const zh: Dict = {
   "links.tiktok.description": "关注我的 TikTok",
   "links.workplot.description": "GitHub 仓库 • 源代码与开发",
   "links.workslop.description": "GitHub 仓库 • iOS 系统修改工具",
+  "links.workslopDesktop.description": "GitHub 仓库 • iOS 桌面调整应用",
+  "links.whatsapp.description": "WhatsApp 群组 • Kamera & HP 社区",
   "about.section": "关于我的研究",
   "about.description":
     "独立教育内容，涵盖 iOS 技术、Apple 生态研究、移动开发与通用安全概念。",
@@ -252,6 +260,8 @@ const ptBR: Dict = {
   "links.tiktok.description": "Siga Meu TikTok",
   "links.workplot.description": "Repositório GitHub • Código-fonte & Desenvolvimento",
   "links.workslop.description": "Repositório GitHub • Ferramentas de modificação do sistema iOS",
+  "links.workslopDesktop.description": "Repositório GitHub • App de ajustes iOS para desktop",
+  "links.whatsapp.description": "Grupo de WhatsApp • Comunidade Kamera & HP",
   "about.section": "SOBRE MINHA PESQUISA",
   "about.description":
     "Conteúdo educacional independente sobre tecnologia iOS, pesquisa do ecossistema Apple, desenvolvimento móvel e conceitos gerais de segurança.",

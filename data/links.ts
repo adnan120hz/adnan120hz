@@ -4,6 +4,7 @@ import {
   MessageCircle,
   Music2,
   Send,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 import { CONFIG } from "@/lib/config";
@@ -101,5 +102,26 @@ export const LINKS: SiteLink[] = [
     urlLabel: "github.com/adnan120hz/WorkSlop",
     icon: Github,
     anchor: "workslop",
+  },
+  {
+    id: "workslop-desktop",
+    sectionNo: "08",
+    sectionKey: "development",
+    title: "WorkSlop Desktop Version",
+    descriptionKey: "links.workslopDesktop.description",
+    url: "https://github.com/adnan120hz/WorkSlop-Desktop-Version",
+    urlLabel: "github.com/adnan120hz/WorkSlop-Desktop-Version",
+    icon: Github,
+    anchor: "workslop-desktop",
+  },
+  {
+    id: "whatsapp-group",
+    sectionNo: "09",
+    sectionKey: "community",
+    title: "Kamera & HP Whatsapp Group",
+    descriptionKey: "links.whatsapp.description",
+    url: "https://chat.whatsapp.com/KyKxm5YYk608BuTHuymCn1?s=cl&p=i&mlu=0&ilr=4",
+    urlLabel: "chat.whatsapp.com",
+    icon: Users,
   },
 ];
