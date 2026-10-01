@@ -96,7 +96,7 @@ export const LINKS: SiteLink[] = [
     id: "workslop",
     sectionNo: "07",
     sectionKey: "development",
-    title: "Adnan.120hz WorkSlop",
+    title: "Adnan.120hz WorkSlop (Archive)",
     descriptionKey: "links.workslop.description",
     url: "https://github.com/adnan120hz/WorkSlop",
     urlLabel: "github.com/adnan120hz/WorkSlop",
