@@ -1,9 +1,11 @@
 import {
   Github,
+  Globe,
   Heart,
   MessageCircle,
   Music2,
   Send,
+  Smartphone,
   Users,
   type LucideIcon,
 } from "lucide-react";
@@ -121,6 +123,85 @@ export const LINKS: SiteLink[] = [
     title: "Kamera & HP Whatsapp Group",
     descriptionKey: "links.whatsapp.description",
     url: "https://chat.whatsapp.com/KyKxm5YYk608BuTHuymCn1?s=cl&p=i&mlu=0&ilr=4",
+    urlLabel: "chat.whatsapp.com",
+    icon: Users,
+  },
+];
+
+/**
+ * Second link table (added 2026-10-10 on the owner's order).
+ * Rendered above the primary dashboard, strictly in array order:
+ * WorkSlop Website → WorkSlop Desktop → WorkSlop Mobile →
+ * Telegram channel → Telegram chat → Kamera WhatsApp → Apple Ecosystem.
+ */
+export const LINKS_FEATURED: SiteLink[] = [
+  {
+    id: "featured-workslop-website",
+    sectionNo: "01",
+    sectionKey: "development",
+    title: "WorkSlop Website",
+    descriptionKey: "links.workslopWebsite.description",
+    url: "https://muse.ai/s/workslop-website-kb6q9dnxzxaxrw",
+    urlLabel: "Official Website",
+    icon: Globe,
+  },
+  {
+    id: "featured-workslop-desktop",
+    sectionNo: "02",
+    sectionKey: "development",
+    title: "WorkSlop Desktop Version",
+    descriptionKey: "links.workslopDesktop.description",
+    url: "https://github.com/adnan120hz/WorkSlop-Desktop-Version",
+    urlLabel: "github.com/adnan120hz/WorkSlop-Desktop-Version",
+    icon: Github,
+  },
+  {
+    id: "featured-workslop-mobile",
+    sectionNo: "03",
+    sectionKey: "development",
+    title: "WorkSlop Mobile",
+    descriptionKey: "links.workslopMobile.description",
+    url: "https://github.com/adnan120hz/WorkSlop-Mobile-New",
+    urlLabel: "github.com/adnan120hz/WorkSlop-Mobile-New",
+    icon: Smartphone,
+  },
+  {
+    id: "featured-telegram-channel",
+    sectionNo: "04",
+    sectionKey: "community",
+    title: "Adnan.120hz Telegram",
+    descriptionKey: "links.telegram.description",
+    url: CONFIG.telegramChannel,
+    urlLabel: "t.me/adnan120hz",
+    icon: Send,
+  },
+  {
+    id: "featured-telegram-chat",
+    sectionNo: "05",
+    sectionKey: "communityChat",
+    title: "Adnan.120hz Chat",
+    descriptionKey: "links.chat.description",
+    url: CONFIG.telegramChat,
+    urlLabel: "t.me/chatadnan",
+    icon: MessageCircle,
+  },
+  {
+    id: "featured-whatsapp-kamera",
+    sectionNo: "06",
+    sectionKey: "community",
+    title: "Kamera & HP Whatsapp Group",
+    descriptionKey: "links.whatsapp.description",
+    url: "https://chat.whatsapp.com/KyKxm5YYk608BuTHuymCn1?s=cl&p=i&mlu=0&ilr=4",
+    urlLabel: "chat.whatsapp.com",
+    icon: Users,
+  },
+  {
+    id: "featured-whatsapp-apple",
+    sectionNo: "07",
+    sectionKey: "community",
+    title: "Apple Ecosystem WhatsApp Group",
+    descriptionKey: "links.appleEcosystem.description",
+    url: "https://chat.whatsapp.com/FRikju51B4h1aoAlAtlYrQ?mode=gi_t",
     urlLabel: "chat.whatsapp.com",
     icon: Users,
   },

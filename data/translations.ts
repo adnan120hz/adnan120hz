@@ -51,6 +51,9 @@ const en: Dict = {
   "links.workslop.description": "GitHub Repository • iOS System Modification Tools",
   "links.workslopDesktop.description": "GitHub Repository • Desktop Tweaking App for iOS",
   "links.whatsapp.description": "WhatsApp Group • Kamera & HP Community",
+  "links.workslopWebsite.description": "Official Website \u2022 WorkSlop Desktop & Mobile",
+  "links.workslopMobile.description": "GitHub Repository \u2022 WorkSlop App for iPhone",
+  "links.appleEcosystem.description": "WhatsApp Group \u2022 Apple Ecosystem Community",
   "about.section": "ABOUT MY RESEARCH",
   "about.description":
     "Independent educational content covering iOS technology, Apple ecosystem research, mobile development, and general security concepts.",
@@ -104,6 +107,9 @@ const id: Dict = {
   "links.workslop.description": "Repositori GitHub • Tools Modifikasi Sistem iOS",
   "links.workslopDesktop.description": "Repositori GitHub • Aplikasi Tweak iOS untuk Desktop",
   "links.whatsapp.description": "Grup WhatsApp • Komunitas Kamera & HP",
+  "links.workslopWebsite.description": "Website Resmi \u2022 WorkSlop Desktop & Mobile",
+  "links.workslopMobile.description": "Repositori GitHub \u2022 Aplikasi WorkSlop untuk iPhone",
+  "links.appleEcosystem.description": "Grup WhatsApp \u2022 Komunitas Apple Ecosystem",
   "about.section": "TENTANG RISET SAYA",
   "about.description":
     "Konten edukasi independen yang mencakup teknologi iOS, riset ekosistem Apple, pengembangan seluler, dan konsep keamanan umum.",
@@ -157,6 +163,9 @@ const vi: Dict = {
   "links.workslop.description": "Kho GitHub • Công cụ sửa đổi hệ thống iOS",
   "links.workslopDesktop.description": "Kho GitHub • Ứng dụng tinh chỉnh iOS trên máy tính",
   "links.whatsapp.description": "Nhóm WhatsApp • Cộng đồng Kamera & HP",
+  "links.workslopWebsite.description": "Trang Web Ch\u00ednh Th\u1ee9c \u2022 WorkSlop Desktop & Mobile",
+  "links.workslopMobile.description": "Kho GitHub \u2022 \u1ee8ng d\u1ee5ng WorkSlop cho iPhone",
+  "links.appleEcosystem.description": "Nh\u00f3m WhatsApp \u2022 C\u1ed9ng \u0111\u1ed3ng Apple Ecosystem",
   "about.section": "VỀ NGHIÊN CỨU CỦA TÔI",
   "about.description":
     "Nội dung giáo dục độc lập về công nghệ iOS, nghiên cứu hệ sinh thái Apple, phát triển di động và các khái niệm bảo mật chung.",
@@ -209,6 +218,9 @@ const zh: Dict = {
   "links.workslop.description": "GitHub 仓库 • iOS 系统修改工具",
   "links.workslopDesktop.description": "GitHub 仓库 • iOS 桌面调整应用",
   "links.whatsapp.description": "WhatsApp 群组 • Kamera & HP 社区",
+  "links.workslopWebsite.description": "\u5b98\u65b9\u7f51\u7ad9 \u2022 WorkSlop Desktop & Mobile",
+  "links.workslopMobile.description": "GitHub \u4ed3\u5e93 \u2022 iPhone \u7248 WorkSlop \u5e94\u7528",
+  "links.appleEcosystem.description": "WhatsApp \u7fa4\u7ec4 \u2022 Apple \u751f\u6001\u793e\u533a",
   "about.section": "关于我的研究",
   "about.description":
     "独立教育内容，涵盖 iOS 技术、Apple 生态研究、移动开发与通用安全概念。",
@@ -262,6 +274,9 @@ const ptBR: Dict = {
   "links.workslop.description": "Repositório GitHub • Ferramentas de modificação do sistema iOS",
   "links.workslopDesktop.description": "Repositório GitHub • App de ajustes iOS para desktop",
   "links.whatsapp.description": "Grupo de WhatsApp • Comunidade Kamera & HP",
+  "links.workslopWebsite.description": "Site Oficial \u2022 WorkSlop Desktop & Mobile",
+  "links.workslopMobile.description": "Reposit\u00f3rio GitHub \u2022 App WorkSlop para iPhone",
+  "links.appleEcosystem.description": "Grupo WhatsApp \u2022 Comunidade Apple Ecosystem",
   "about.section": "SOBRE MINHA PESQUISA",
   "about.description":
     "Conteúdo educacional independente sobre tecnologia iOS, pesquisa do ecossistema Apple, desenvolvimento móvel e conceitos gerais de segurança.",
