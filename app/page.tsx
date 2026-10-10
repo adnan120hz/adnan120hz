@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import ProfileSection from "@/components/ProfileSection";
-import FeaturedLinks from "@/components/FeaturedLinks";
 import LinkDashboard from "@/components/LinkDashboard";
 import AboutResearch from "@/components/AboutResearch";
 import Footer from "@/components/Footer";
@@ -19,7 +18,6 @@ export default function HomePage() {
         <Header />
         <main>
           <ProfileSection />
-          <FeaturedLinks />
           <LinkDashboard />
           <AboutResearch />
         </main>
