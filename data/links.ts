@@ -36,14 +36,25 @@ export interface SiteLink {
 /**
  * Single source of truth for the link table.
  * Rendered in array order — never sorted, never filtered.
- * Order set by the owner (2026-10-10): WorkSlop Website, Desktop,
- * Mobile, Telegram channel, Telegram chat, Kamera WhatsApp,
- * Apple Ecosystem WhatsApp, then the long-standing cards.
+ * Order set by the owner (2026-10-10): TikTok first, then the
+ * WorkSlop trio, Telegram channel & chat, the two WhatsApp groups,
+ * Donate and WorkPlot. The archived WorkSlop card was removed.
  */
 export const LINKS: SiteLink[] = [
   {
-    id: "workslop-website",
+    id: "tiktok",
     sectionNo: "02",
+    sectionKey: "social",
+    title: "Adnan.120hz TikTok",
+    descriptionKey: "links.tiktok.description",
+    url: CONFIG.tiktokUrl,
+    urlLabel: "tiktok.com/@adnan.120hz",
+    icon: Music2,
+    anchor: "social",
+  },
+  {
+    id: "workslop-website",
+    sectionNo: "03",
     sectionKey: "development",
     title: "WorkSlop Website",
     descriptionKey: "links.workslopWebsite.description",
@@ -54,7 +65,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "workslop-desktop",
-    sectionNo: "03",
+    sectionNo: "04",
     sectionKey: "development",
     title: "WorkSlop Desktop Version",
     descriptionKey: "links.workslopDesktop.description",
@@ -65,7 +76,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "workslop-mobile",
-    sectionNo: "04",
+    sectionNo: "05",
     sectionKey: "development",
     title: "WorkSlop Mobile",
     descriptionKey: "links.workslopMobile.description",
@@ -76,7 +87,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "telegram-channel",
-    sectionNo: "05",
+    sectionNo: "06",
     sectionKey: "community",
     title: "Adnan.120hz Telegram",
     descriptionKey: "links.telegram.description",
@@ -87,7 +98,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "telegram-chat",
-    sectionNo: "06",
+    sectionNo: "07",
     sectionKey: "communityChat",
     title: "Adnan.120hz Chat",
     descriptionKey: "links.chat.description",
@@ -97,7 +108,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "whatsapp-group",
-    sectionNo: "07",
+    sectionNo: "08",
     sectionKey: "community",
     title: "Kamera & HP Whatsapp Group",
     descriptionKey: "links.whatsapp.description",
@@ -107,7 +118,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "whatsapp-apple",
-    sectionNo: "08",
+    sectionNo: "09",
     sectionKey: "community",
     title: "Apple Ecosystem WhatsApp Group",
     descriptionKey: "links.appleEcosystem.description",
@@ -117,7 +128,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "donate",
-    sectionNo: "09",
+    sectionNo: "10",
     sectionKey: "support",
     title: "Donate Adnan.120hz / Gievano",
     descriptionKey: "links.donate.description",
@@ -129,17 +140,6 @@ export const LINKS: SiteLink[] = [
     accent: true,
   },
   {
-    id: "tiktok",
-    sectionNo: "10",
-    sectionKey: "social",
-    title: "Adnan.120hz TikTok",
-    descriptionKey: "links.tiktok.description",
-    url: CONFIG.tiktokUrl,
-    urlLabel: "tiktok.com/@adnan.120hz",
-    icon: Music2,
-    anchor: "social",
-  },
-  {
     id: "workplot",
     sectionNo: "11",
     sectionKey: "development",
@@ -149,17 +149,6 @@ export const LINKS: SiteLink[] = [
     urlLabel: "github.com/gievano/WorkPlot",
     icon: Github,
     anchor: "development",
-  },
-  {
-    id: "workslop",
-    sectionNo: "12",
-    sectionKey: "development",
-    title: "Adnan.120hz WorkSlop (Archive)",
-    descriptionKey: "links.workslop.description",
-    url: "https://github.com/adnan120hz/WorkSlop",
-    urlLabel: "github.com/adnan120hz/WorkSlop",
-    icon: Github,
-    anchor: "workslop",
   },
 ];
 

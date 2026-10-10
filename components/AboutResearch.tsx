@@ -14,7 +14,7 @@ export default function AboutResearch() {
 
   return (
     <section aria-label={t("about.section")} className="mt-10">
-      <SectionHeading no="13" label={t("about.section")} />
+      <SectionHeading no="12" label={t("about.section")} />
 
       <div className="card-cell min-w-0 p-5 sm:p-6">
         <div className="flex min-w-0 items-start gap-4">
