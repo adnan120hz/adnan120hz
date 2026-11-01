@@ -6,6 +6,7 @@ import {
   Music2,
   Send,
   Smartphone,
+  Sparkles,
   Users,
   type LucideIcon,
 } from "lucide-react";
@@ -36,9 +37,12 @@ export interface SiteLink {
 /**
  * Single source of truth for the link table.
  * Rendered in array order — never sorted, never filtered.
- * Order set by the owner (2026-10-10): TikTok first, then the
- * WorkSlop trio, Telegram channel & chat, the two WhatsApp groups,
- * Donate and WorkPlot. The archived WorkSlop card was removed.
+ * Order set by the owner (2026-11-01, final list + Siri Ai
+ * insertion): TikTok, Channel, Chat, Donate, Siri Ai,
+ * WorkSlop trio, WorkSlop Group Chat, WorkPlot Github
+ * Download, WorkPlot Chat. The two WhatsApp groups were
+ * dropped from the list by the same owner order; the
+ * archived WorkSlop card stays removed.
  */
 export const LINKS: SiteLink[] = [
   {
@@ -53,8 +57,52 @@ export const LINKS: SiteLink[] = [
     anchor: "social",
   },
   {
-    id: "workslop-website",
+    id: "telegram-channel",
     sectionNo: "03",
+    sectionKey: "community",
+    title: "Adnan.120hz Channel",
+    descriptionKey: "links.telegram.description",
+    url: CONFIG.telegramChannel,
+    urlLabel: "t.me/adnan120hz",
+    icon: Send,
+    anchor: "community",
+  },
+  {
+    id: "telegram-chat",
+    sectionNo: "04",
+    sectionKey: "communityChat",
+    title: "Adnan.120hz Chat",
+    descriptionKey: "links.chat.description",
+    url: CONFIG.telegramChat,
+    urlLabel: "t.me/chatadnan",
+    icon: MessageCircle,
+  },
+  {
+    id: "donate",
+    sectionNo: "05",
+    sectionKey: "support",
+    title: "Donate All Project Adnan.120hz",
+    descriptionKey: "links.donate.description",
+    extraKey: "links.donate.extra",
+    url: CONFIG.donateUrl,
+    urlLabel: "adnan120hz-redesign-ui.vercel.app",
+    icon: Heart,
+    anchor: "support",
+    accent: true,
+  },
+  {
+    id: "siri-ai",
+    sectionNo: "06",
+    sectionKey: "development",
+    title: "Siri Ai By Adnan.120hz",
+    descriptionKey: "links.siriAi.description",
+    url: "https://github.com/adnan120hz/Siri-Ai-by-adnan.120hz",
+    urlLabel: "github.com/adnan120hz/Siri-Ai-by-adnan.120hz",
+    icon: Sparkles,
+  },
+  {
+    id: "workslop-website",
+    sectionNo: "07",
     sectionKey: "development",
     title: "WorkSlop Website",
     descriptionKey: "links.workslopWebsite.description",
@@ -65,7 +113,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "workslop-desktop",
-    sectionNo: "04",
+    sectionNo: "08",
     sectionKey: "development",
     title: "WorkSlop Desktop Version",
     descriptionKey: "links.workslopDesktop.description",
@@ -76,7 +124,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "workslop-mobile",
-    sectionNo: "05",
+    sectionNo: "09",
     sectionKey: "development",
     title: "WorkSlop Mobile",
     descriptionKey: "links.workslopMobile.description",
@@ -86,70 +134,34 @@ export const LINKS: SiteLink[] = [
     anchor: "workslop-mobile",
   },
   {
-    id: "telegram-channel",
-    sectionNo: "06",
-    sectionKey: "community",
-    title: "Adnan.120hz Telegram",
-    descriptionKey: "links.telegram.description",
-    url: CONFIG.telegramChannel,
-    urlLabel: "t.me/adnan120hz",
-    icon: Send,
-    anchor: "community",
-  },
-  {
-    id: "telegram-chat",
-    sectionNo: "07",
-    sectionKey: "communityChat",
-    title: "Adnan.120hz Chat",
-    descriptionKey: "links.chat.description",
-    url: CONFIG.telegramChat,
-    urlLabel: "t.me/chatadnan",
-    icon: MessageCircle,
-  },
-  {
-    id: "whatsapp-group",
-    sectionNo: "08",
-    sectionKey: "community",
-    title: "Kamera & HP Whatsapp Group",
-    descriptionKey: "links.whatsapp.description",
-    url: "https://chat.whatsapp.com/KyKxm5YYk608BuTHuymCn1?s=cl&p=i&mlu=0&ilr=4",
-    urlLabel: "chat.whatsapp.com",
-    icon: Users,
-  },
-  {
-    id: "whatsapp-apple",
-    sectionNo: "09",
-    sectionKey: "community",
-    title: "Apple Ecosystem WhatsApp Group",
-    descriptionKey: "links.appleEcosystem.description",
-    url: "https://chat.whatsapp.com/FRikju51B4h1aoAlAtlYrQ?mode=gi_t",
-    urlLabel: "chat.whatsapp.com",
-    icon: Users,
-  },
-  {
-    id: "donate",
+    id: "workslop-group-chat",
     sectionNo: "10",
-    sectionKey: "support",
-    title: "Donate Adnan.120hz / Gievano",
-    descriptionKey: "links.donate.description",
-    extraKey: "links.donate.extra",
-    url: CONFIG.donateUrl,
-    urlLabel: "adnan120hz-redesign-ui.vercel.app",
-    icon: Heart,
-    anchor: "support",
-    accent: true,
+    sectionKey: "community",
+    title: "WorkSlop Group Chat",
+    descriptionKey: "links.workslopGroupChat.description",
+    url: "https://t.me/workslopgroup",
+    urlLabel: "t.me/workslopgroup",
+    icon: Users,
   },
   {
     id: "workplot",
     sectionNo: "11",
     sectionKey: "development",
-    title: "Gievano & Adnan.120hz WorkPlot",
+    title: "WorkPlot Github Download",
     descriptionKey: "links.workplot.description",
     url: CONFIG.githubUrl,
     urlLabel: "github.com/gievano/WorkPlot",
     icon: Github,
     anchor: "development",
   },
+  {
+    id: "workplot-chat",
+    sectionNo: "12",
+    sectionKey: "community",
+    title: "WorkPlot Chat",
+    descriptionKey: "links.workplotChat.description",
+    url: "https://t.me/workplotios",
+    urlLabel: "t.me/workplotios",
+    icon: MessageCircle,
+  },
 ];
-
-

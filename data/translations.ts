@@ -44,6 +44,9 @@ const en: Dict = {
 
   "links.telegram.description": "Official Telegram Channel",
   "links.chat.description": "Official Community Chat",
+  "links.workslopGroupChat.description": "Official WorkSlop Group Chat",
+  "links.workplotChat.description": "Official WorkPlot Group Chat",
+  "links.siriAi.description": "GitHub Repository • AI Chat App for iOS",
   "links.donate.description": "Support Future Projects & Development",
   "links.donate.extra":
     "Support upcoming independent research, development, and future projects.",
@@ -101,6 +104,9 @@ const id: Dict = {
 
   "links.telegram.description": "Kanal Telegram Resmi",
   "links.chat.description": "Obrolan Komunitas Resmi",
+  "links.workslopGroupChat.description": "Grup Chat WorkSlop Resmi",
+  "links.workplotChat.description": "Grup Chat WorkPlot Resmi",
+  "links.siriAi.description": "Repositori GitHub • Aplikasi Chat AI untuk iOS",
   "links.donate.description": "Dukung Proyek Masa Depan & Pengembangan",
   "links.donate.extra":
     "Dukung riset independen, pengembangan, dan proyek masa depan yang akan datang.",

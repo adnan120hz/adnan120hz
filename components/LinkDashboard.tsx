@@ -7,10 +7,9 @@ import SectionHeading from "./SectionHeading";
 
 /**
  * Uniform fluid card grid of all links, in LINKS array order —
- * never sorted. One grid, one section: the 2026-10-10 owner order
- * and every URL are unchanged. Anchor ids stay on the card
- * wrappers so the sticky nav targets (#community, #support,
- * #development) keep working.
+ * never sorted. One grid, one section: the 2026-11-01 owner
+ * order. Anchor ids stay on the card wrappers so the sticky
+ * nav targets (#community, #support, #development) keep working.
  */
 export default function LinkDashboard() {
   const { t } = useI18n();
