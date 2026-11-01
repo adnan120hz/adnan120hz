@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { CONFIG } from "@/lib/config";
-import TerminalBackground from "@/components/TerminalBackground";
 import Providers from "@/components/Providers";
 import "./globals.css";
 
@@ -35,7 +34,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TerminalBackground />
         <Providers>{children}</Providers>
       </body>
     </html>

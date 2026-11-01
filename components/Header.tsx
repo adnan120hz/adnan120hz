@@ -12,87 +12,58 @@ const NAV_ITEMS = [
 ] as const;
 
 /**
- * Insert a break opportunity after every "." and "/" so long nav labels
- * wrap cleanly ("Adnan." / "120hz/" / "WorkPlot") instead of being cut
- * mid-word by overflow-wrap: anywhere.
- */
-function breakable(label: string) {
-  return label.split(/([./])/g).map((chunk, i) =>
-    chunk === "." || chunk === "/" ? (
-      <span key={i}>
-        {chunk}
-        <wbr />
-      </span>
-    ) : (
-      <span key={i}>{chunk}</span>
-    ),
-  );
-}
-
-/**
- * Compact terminal-inspired header.
- * One short title-bar strip plus one slim sticky nav row —
- * deliberately small so the profile appears immediately below,
- * even on mobile. No boot log, no fake terminal session.
+ * Fluid sticky header, WorkSlop style: blurred paper background,
+ * rounded brand mark, pill nav links. No boxes, no hard borders.
  */
 export default function Header() {
   const { t } = useI18n();
 
   return (
-    <header className="relative z-10">
-      {/* title-bar strip */}
-      <div className="term-window">
-        <div className="term-titlebar flex-wrap gap-x-3 gap-y-2 py-2">
-          <span aria-hidden="true" className="flex flex-shrink-0 gap-1.5">
-            <span className="term-dot bg-accentdark" />
-            <span className="term-dot bg-accent" />
-            <span className="term-dot bg-codegreen" />
+    <header className="sticky top-0 z-40 bg-paper/85 backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-[1020px] flex-wrap items-center gap-x-4 gap-y-2 px-5 py-3 sm:px-6">
+        <a href="#home" className="flex min-w-0 items-center gap-2.5 !text-ink">
+          <span
+            aria-hidden="true"
+            className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-brand text-white"
+          >
+            <ShieldCheck size={18} strokeWidth={2.5} />
           </span>
-          <span className="twrap min-w-0 flex-1 font-mono text-[12px] font-bold text-ink">
-            <span className="block leading-tight">Adnan.120hz</span>
-            <span className="block leading-tight">Apple Security Reserch</span>
+          <span className="min-w-0 leading-tight">
+            <span className="twrap block text-[15px] font-extrabold tracking-tight">
+              Adnan.120hz
+            </span>
+            <span className="twrap block text-[11px] font-medium text-faint">
+              {t("profile.eyebrow")}
+            </span>
           </span>
-          <span className="flex flex-shrink-0 items-center gap-1.5 font-mono text-[11px] font-bold uppercase tracking-widest text-ink">
-            <span className="status-dot" aria-hidden="true" />
-            {t("header.online")}
-          </span>
-          <LanguageSelector />
-        </div>
-      </div>
+        </a>
 
-      {/* slim sticky nav with brand badge */}
-      <nav
-        aria-label={t("nav.label")}
-        className="sticky top-2 z-40 mt-3 border-2 border-line bg-surface shadow-hard-sm"
-      >
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 px-2 py-1.5 sm:px-3">
-          <p className="mr-1 inline-flex flex-shrink-0 items-center gap-1.5 border-2 border-line bg-ink px-2 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-paper">
-            <ShieldCheck size={13} strokeWidth={2.75} aria-hidden="true" />
-            {t("profile.eyebrow")}
-          </p>
-          <ul className="flex min-w-0 flex-1 flex-wrap items-center">
-            {NAV_ITEMS.map((item, index) => (
-              <li key={item.href} className="flex min-w-0 items-center">
-                {index > 0 && (
-                  <span
-                    aria-hidden="true"
-                    className="font-mono text-[11px] text-muted"
-                  >
-                    /
-                  </span>
-                )}
+        <nav aria-label={t("nav.label")} className="order-3 w-full min-w-0 sm:order-none sm:w-auto sm:flex-1">
+          <ul className="flex min-w-0 flex-wrap items-center gap-1">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.href} className="min-w-0">
                 <a
                   href={item.href}
-                  style={{ overflowWrap: "break-word" }}
-                  className="min-w-0 max-w-full px-2 py-1.5 font-mono text-[11px] font-bold tracking-[0.16em] text-ink transition-colors hover:bg-accent hover:text-accenttext sm:px-3"
+                  className="block rounded-full px-3 py-1.5 text-[13px] font-semibold !text-ink2 transition-colors hover:bg-brandwash hover:!text-brand"
                 >
-                  {breakable(t(item.key))}
+                  {t(item.key)}
                 </a>
               </li>
             ))}
           </ul>
-        </div>
-      </nav>
+        </nav>
+
+        <span className="hidden items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-faint sm:inline-flex">
+          <span
+            aria-hidden="true"
+            className="h-2 w-2 rounded-full bg-good"
+          />
+          {t("header.online")}
+        </span>
+        <span className="ml-auto sm:ml-0">
+          <LanguageSelector />
+        </span>
+      </div>
     </header>
   );
 }

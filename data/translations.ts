@@ -40,6 +40,7 @@ const en: Dict = {
   "sections.support": "SUPPORT",
   "sections.social": "SOCIAL",
   "sections.development": "DEVELOPMENT",
+  "links.section": "LINKS",
 
   "links.telegram.description": "Official Telegram Channel",
   "links.chat.description": "Official Community Chat",
@@ -96,6 +97,7 @@ const id: Dict = {
   "sections.support": "DUKUNGAN",
   "sections.social": "SOSIAL",
   "sections.development": "PENGEMBANGAN",
+  "links.section": "TAUTAN",
 
   "links.telegram.description": "Kanal Telegram Resmi",
   "links.chat.description": "Obrolan Komunitas Resmi",
@@ -152,6 +154,7 @@ const vi: Dict = {
   "sections.support": "HỖ TRỢ",
   "sections.social": "MẠNG XÃ HỘI",
   "sections.development": "PHÁT TRIỂN",
+  "links.section": "LIÊN KẾT",
 
   "links.telegram.description": "Kênh Telegram Chính thức",
   "links.chat.description": "Nhóm Trò chuyện Cộng đồng Chính thức",
@@ -208,6 +211,7 @@ const zh: Dict = {
   "sections.support": "支持",
   "sections.social": "社交",
   "sections.development": "开发",
+  "links.section": "链接",
 
   "links.telegram.description": "官方 Telegram 频道",
   "links.chat.description": "官方社区聊天",
@@ -263,6 +267,7 @@ const ptBR: Dict = {
   "sections.support": "APOIO",
   "sections.social": "SOCIAL",
   "sections.development": "DESENVOLVIMENTO",
+  "links.section": "LINKS",
 
   "links.telegram.description": "Canal Oficial no Telegram",
   "links.chat.description": "Chat Oficial da Comunidade",

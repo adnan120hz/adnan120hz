@@ -1,18 +1,12 @@
 "use client";
 
-import { MotionConfig } from "framer-motion";
 import type { ReactNode } from "react";
 import { LanguageProvider } from "@/lib/i18n";
 
 /**
- * Client-side providers: i18n + motion settings.
- * `reducedMotion="user"` disables Framer Motion transforms
- * for visitors who prefer reduced motion.
+ * Client-side providers: i18n only. No motion library —
+ * the fluid theme uses plain CSS transitions.
  */
 export default function Providers({ children }: { children: ReactNode }) {
-  return (
-    <MotionConfig reducedMotion="user">
-      <LanguageProvider>{children}</LanguageProvider>
-    </MotionConfig>
-  );
+  return <LanguageProvider>{children}</LanguageProvider>;
 }
