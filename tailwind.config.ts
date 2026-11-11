@@ -10,17 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#A9C6DA",
-        surface: "#BCD4E4",
-        surfacelight: "#D3E3EF",
+        paper: "#9CC2F8",
+        surface: "#C4DBFC",
+        surfacelight: "#E6F0FE",
         ink: "#0F1B28",
-        muted: "#47617A",
+        muted: "#3D5A80",
         line: "#152434",
-        accent: "#0A4FE0",
-        accentdark: "#073AAB",
+        accent: "#1B74EE",
+        accentdark: "#0E5FE3",
         accenttext: "#FFFFFF",
         codegreen: "#2E7D4F",
-        codeblue: "#1A56C4",
+        codeblue: "#0E5FE3",
       },
       fontFamily: {
         sans: ["Arial", "Helvetica", "system-ui", "sans-serif"],

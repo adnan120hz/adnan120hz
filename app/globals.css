@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 /* ————————————————————————————————
-   ADNAN.120HZ — light BLUE terminal design tokens
-   Cool steel-blue paper × dark console code × WorkSlop blue accent (#0a4fe0)
+   ADNAN.120HZ — WorkSlop icon blue theme
+   Icon blue gradient #2e8cf7 → #1b74ee → #0e5fe3 × dark console code
 ———————————————————————————————— */
 :root {
-  --background: #a9c6da;
-  --surface: #bcd4e4;
-  --surface-light: #d3e3ef;
+  --background: #9cc2f8;
+  --surface: #c4dbfc;
+  --surface-light: #e6f0fe;
   --foreground: #0f1b28;
-  --foreground-muted: #47617a;
+  --foreground-muted: #3d5a80;
   --border: #152434;
-  --accent: #0a4fe0;
-  --accent-dark: #073aab;
+  --accent: #1b74ee;
+  --accent-dark: #0e5fe3;
   --accent-text: #ffffff;
   --code-green: #2e7d4f;
-  --code-blue: #1a56c4;
+  --code-blue: #0e5fe3;
 }
 
 html {
@@ -99,7 +99,7 @@ body::before {
 }
 
 .term-line.tone-dim {
-  color: #3d4f61;
+  color: #46608a;
 }
 
 @keyframes term-scroll {
