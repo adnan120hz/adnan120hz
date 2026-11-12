@@ -38,7 +38,7 @@ export interface SiteLink {
  * Single source of truth for the link table.
  * Rendered in array order — never sorted, never filtered.
  * Order set by the owner (2026-11-01, final list + Siri Ai
- * insertion): TikTok, Channel, Chat, Donate, Siri Ai,
+ * insertion): TikTok, Channel, Chat, Donate, Siri Ai, WorkTweaks,
  * WorkSlop trio, WorkSlop Group Chat, WorkPlot Github
  * Download, WorkPlot Chat. The two WhatsApp groups were
  * dropped from the list by the same owner order; the
@@ -101,8 +101,19 @@ export const LINKS: SiteLink[] = [
     icon: Sparkles,
   },
   {
-    id: "workslop-website",
+    id: "worktweaks",
     sectionNo: "07",
+    sectionKey: "development",
+    title: "WorkTweaks",
+    descriptionKey: "links.worktweaks.description",
+    url: "https://github.com/adnan120hz/WorkTweaks",
+    urlLabel: "github.com/adnan120hz/WorkTweaks",
+    icon: Github,
+    anchor: "worktweaks",
+  },
+  {
+    id: "workslop-website",
+    sectionNo: "08",
     sectionKey: "development",
     title: "WorkSlop Website",
     descriptionKey: "links.workslopWebsite.description",
@@ -113,7 +124,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "workslop-desktop",
-    sectionNo: "08",
+    sectionNo: "09",
     sectionKey: "development",
     title: "WorkSlop Desktop Version",
     descriptionKey: "links.workslopDesktop.description",
@@ -124,7 +135,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "workslop-mobile",
-    sectionNo: "09",
+    sectionNo: "10",
     sectionKey: "development",
     title: "WorkSlop Mobile",
     descriptionKey: "links.workslopMobile.description",
@@ -135,7 +146,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "workslop-group-chat",
-    sectionNo: "10",
+    sectionNo: "11",
     sectionKey: "community",
     title: "WorkSlop Group Chat",
     descriptionKey: "links.workslopGroupChat.description",
@@ -145,7 +156,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "workplot",
-    sectionNo: "11",
+    sectionNo: "12",
     sectionKey: "development",
     title: "WorkPlot Github Download",
     descriptionKey: "links.workplot.description",
@@ -156,7 +167,7 @@ export const LINKS: SiteLink[] = [
   },
   {
     id: "workplot-chat",
-    sectionNo: "12",
+    sectionNo: "13",
     sectionKey: "community",
     title: "WorkPlot Chat",
     descriptionKey: "links.workplotChat.description",
